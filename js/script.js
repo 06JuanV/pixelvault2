@@ -16,6 +16,7 @@ const GAMES = [
   { id: "neo-07", title: "Neon Drifters",    category: "accion",     price: 39900,  glyph: "NF", tag: "Oferta",    desc: "Carreras callejeras contrarreloj." },
   { id: "pap-08", title: "Paper Moon",       category: "indie",      price: 24900,  glyph: "PM", tag: "Indie",     desc: "Plataformas de papel recortado y viento." },
   { id: "vlt-09", title: "Vault Keepers",    category: "estrategia", price: 54900,  glyph: "VK", tag: "",          desc: "Gestión de recursos en bóvedas subterráneas." },
+  { id: "sta-11", title: "Static Bloom", category: "indie", price: 27900, glyph: "SB", tag: "Nuevo", desc: "Aventura sonora sobre una radio que florece de noche." },
 ];
 
 const fmt = new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 });
