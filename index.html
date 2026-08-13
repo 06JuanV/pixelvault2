@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelVault — Tu bóveda de videojuegos</title>
+<meta name="description" content="PixelVault: catálogo de videojuegos, ofertas de temporada y lanzamientos destacados.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="logo-text">PIXEL<span class="accent">VAULT</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#nosotros">Sobre nosotros</a>
+      <a href="#newsletter">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="cartToggle" aria-haspopup="true" aria-expanded="false" aria-controls="cartDrawer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6"/><circle cx="9" cy="21" r="1"/><circle cx="18" cy="21" r="1"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">// Temporada 04 — ahora disponible</p>
+      <h1>Tu proxima partida<br>empieza aqui.</h1>
+      <p class="hero-sub">Más de 300 títulos organizados como una bóveda real: cada juego tiene su propio cartucho, su propia etiqueta y su propio lugar en el estante. Sin relleno, sin ruido — solo el catálogo.</p>
+      <div class="hero-cta">
+        <a href="#catalogo" class="btn btn-primary">Explorar catálogo</a>
+        <a href="#ofertas" class="btn btn-ghost">Ver ofertas</a>
+      </div>
+      <dl class="hero-stats">
+        <div><dt>312</dt><dd>títulos activos</dd></div>
+        <div><dt>18</dt><dd>estudios indie</dd></div>
+        <div><dt>4.8</dt><dd>rating de comunidad</dd></div>
+      </dl>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="cart-showcase">
+        <div class="cart-shell">
+          <div class="cart-notch"></div>
+          <div class="cart-label">
+            <span class="cart-label-title">NEBULA<br>DRIFT</span>
+            <span class="cart-label-sub">RPG · 04</span>
+          </div>
+          <div class="cart-stripes"></div>
+        </div>
+        <div class="glow-ring"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>NEBULA DRIFT</span><span>·</span><span>IRON VALE</span><span>·</span><span>CHRONO RIFT</span><span>·</span><span>SALT &amp; SIGNAL</span><span>·</span><span>HOLLOW ORBIT</span><span>·</span><span>ASH KINGDOM</span><span>·</span><span>NEON DRIFTERS</span><span>·</span><span>PAPER MOON</span><span>·</span>
+      <span>NEBULA DRIFT</span><span>·</span><span>IRON VALE</span><span>·</span><span>CHRONO RIFT</span><span>·</span><span>SALT &amp; SIGNAL</span><span>·</span><span>HOLLOW ORBIT</span><span>·</span><span>ASH KINGDOM</span><span>·</span><span>NEON DRIFTERS</span><span>·</span><span>PAPER MOON</span><span>·</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATÁLOGO ============ -->
+<section class="catalog" id="catalogo">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>El estante</h2>
+      <p>Filtra por género. Cada cartucho lleva su precio en la etiqueta inferior.</p>
+    </div>
+
+    <div class="filter-tabs" id="filterTabs" role="tablist">
+      <button class="tab active" data-filter="todos" role="tab" aria-selected="true">Todos</button>
+      <button class="tab" data-filter="accion" role="tab" aria-selected="false">Acción</button>
+      <button class="tab" data-filter="rpg" role="tab" aria-selected="false">RPG</button>
+      <button class="tab" data-filter="indie" role="tab" aria-selected="false">Indie</button>
+      <button class="tab" data-filter="estrategia" role="tab" aria-selected="false">Estrategia</button>
+    </div>
+
+    <div class="cart-grid" id="catalogGrid"><!-- generado por js/script.js --></div>
+  </div>
+</section>
+
+<!-- ============ OFERTA DESTACADA ============ -->
+<section class="promo" id="ofertas">
+  <div class="wrap promo-inner">
+    <div class="promo-copy">
+      <p class="eyebrow eyebrow-light">// Oferta de temporada</p>
+      <h2>3 cartuchos por el precio de 2</h2>
+      <p>Válido en toda la colección indie hasta fin de mes. Se aplica automáticamente el título de menor precio al llevar tres o más unidades.</p>
+      <a href="#catalogo" class="btn btn-light">Ver colección indie</a>
+    </div>
+    <div class="promo-code">
+      <span class="promo-code-label">Código</span>
+      <span class="promo-code-value">3X2-INDIE</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE NOSOTROS ============ -->
+<section class="about" id="nosotros">
+  <div class="wrap about-inner">
+    <div class="about-copy">
+      <h2>Una bóveda, no un almacén</h2>
+      <p>PixelVault nació de una idea simple: un catálogo de juegos debería sentirse como abrir un cajón de cartuchos, no como desplazarse por una hoja de cálculo. Cada título que agregamos pasa por control de calidad de nuestra curaduría antes de subir al estante — priorizamos estudios pequeños y juegos con una identidad clara.</p>
+    </div>
+    <ul class="about-list">
+      <li><strong>Curaduría manual.</strong> Nada de catálogos automáticos: cada juego lo revisa el equipo.</li>
+      <li><strong>Envío digital inmediato.</strong> La clave llega a tu correo al confirmar el pago.</li>
+      <li><strong>Soporte real.</strong> Respondemos dudas de instalación en menos de 24 horas.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER / FOOTER ============ -->
+<footer class="site-footer" id="newsletter">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="logo-text">PIXEL<span class="accent">VAULT</span></span>
+      <p>Catálogo curado de videojuegos. Actualizamos el estante cada dos semanas.</p>
+    </div>
+
+    <form class="footer-form" id="newsletterForm">
+      <label for="newsletterEmail">Recibe lanzamientos y ofertas</label>
+      <div class="footer-form-row">
+        <input type="email" id="newsletterEmail" placeholder="tu@correo.com" required>
+        <button type="submit" class="btn btn-primary">Suscribirme</button>
+      </div>
+      <p class="footer-form-note" id="newsletterNote" aria-live="polite"></p>
+    </form>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 PixelVault. Proyecto de demostración estático.</p>
+    <div class="footer-links">
+      <a href="#catalogo">Catálogo</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#nosotros">Nosotros</a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <div class="cart-drawer-head">
+    <h3>Tu bóveda</h3>
+    <button id="cartClose" aria-label="Cerrar carrito">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <p class="cart-empty" id="cartEmptyMsg">Aún no hay cartuchos aquí.</p>
+  </div>
+  <div class="cart-drawer-foot">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span id="cartTotal">$0</span>
+    </div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Finalizar compra</button>
+  </div>
+</aside>
+
+<script src="js/script.js"></script>
+</body>
+</html>
